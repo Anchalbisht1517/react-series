@@ -1,0 +1,36 @@
+# Model hyperparameters and thresholds
+model:
+  xgboost:
+    n_estimators: 200
+    max_depth: 6
+    learning_rate: 0.1
+    scale_pos_weight: 4
+    random_state: 42
+    use_label_encoder: false
+    eval_metric: logloss
+
+  logistic_regression:
+    class_weight: balanced
+    max_iter: 1000
+    random_state: 42
+
+  decision_tree:
+    max_depth: 6
+    class_weight: balanced
+    random_state: 42
+
+  random_forest:
+    n_estimators: 100
+    class_weight: balanced
+    random_state: 42
+
+# Prediction thresholds
+prediction:
+  high_risk_threshold: 0.65
+  medium_risk_threshold: 0.40
+
+# Data split
+split:
+  test_size: 0.2
+  random_state: 42
+  stratify: true

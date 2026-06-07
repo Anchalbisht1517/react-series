@@ -1,0 +1,29 @@
+# Project-level configuration
+project_name: noshow_predictor
+
+# Paths (relative to project root)
+artifacts_root: artifacts
+data:
+  raw_path: data/raw/KaggleV2-May-2016.csv
+  processed_path: data/processed/cleaned_appointments_v3.csv
+
+# Target column names
+target_column: NoShow
+
+# Columns to drop before modeling
+drop_columns:
+  - PatientId
+  - AppointmentID
+  - ScheduledDay
+  - AppointmentDay
+
+# Categorical columns that require one-hot or ordinal encoding
+# (handled manually in cleaning / FE components)
+categorical_columns:
+  - Gender
+  - Neighbourhood
+
+# Numeric columns to be scaled
+numeric_features:
+  - Age
+  - days_waiting

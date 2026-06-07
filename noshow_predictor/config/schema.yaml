@@ -1,0 +1,38 @@
+# Expected raw schema for KaggleV2-May-2016.csv
+# Used by data_validation.py to assert column presence and types.
+
+columns:
+  - PatientId
+  - AppointmentID
+  - Gender
+  - ScheduledDay
+  - AppointmentDay
+  - Age
+  - Neighbourhood
+  - Scholarship
+  - Hipertension
+  - Diabetes
+  - Alcoholism
+  - Handcap
+  - SMS_received
+  - No-show
+
+dtypes:
+  PatientId: float64
+  AppointmentID: int64
+  Gender: object
+  ScheduledDay: datetime64[ns]
+  AppointmentDay: datetime64[ns]
+  Age: int64
+  Neighbourhood: object
+  Scholarship: int64
+  Hipertension: int64
+  Diabetes: int64
+  Alcoholism: int64
+  Handcap: int64
+  SMS_received: int64
+  No-show: object
+
+# Maximum allowed null percentage per column (0.0 = no nulls allowed)
+null_tolerance:
+  default: 0.0
