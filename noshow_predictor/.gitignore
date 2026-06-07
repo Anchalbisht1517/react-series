@@ -40,12 +40,10 @@ logs/*.log
 *.log
 
 # Artifacts that should be committed for deployment:
-# - data/processed/cleaned_appointments_v3.csv
-# - models/*.pkl
-# - outputs/plots/*.png
-# - outputs/model_comparison.csv
-# - artifacts/data_transformation/*.pkl
-# - artifacts/model_trainer/all_models.pkl
+!data/processed/cleaned_appointments_v3.csv
+!models/*.pkl
+!outputs/plots/*.png
+!outputs/model_comparison.csv
 
 # Only ignore large/temporary files
 *.tmp
