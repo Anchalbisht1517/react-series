@@ -15,13 +15,8 @@ dist/
 *.egg-info/
 .eggs/
 
-# Data files
+# Raw data (user-provided, never commit)
 data/raw/
-*.csv
-
-# Model artifacts
-models/*.pkl
-*.pkl
 
 # Streamlit secrets
 .streamlit/secrets.toml
@@ -44,8 +39,14 @@ Thumbs.db
 logs/*.log
 *.log
 
-# Outputs
-outputs/plots/*.png
-outputs/plots/*.jpg
-outputs/plots/*.svg
-outputs/*.csv
+# Artifacts that should be committed for deployment:
+# - data/processed/cleaned_appointments_v3.csv
+# - models/*.pkl
+# - outputs/plots/*.png
+# - outputs/model_comparison.csv
+# - artifacts/data_transformation/*.pkl
+# - artifacts/model_trainer/all_models.pkl
+
+# Only ignore large/temporary files
+*.tmp
+*.bak
